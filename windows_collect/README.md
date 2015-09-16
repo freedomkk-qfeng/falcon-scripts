@@ -7,7 +7,7 @@ python >= 2.6
 
 [psutil](https://pypi.python.org/pypi/psutil)
 
-[request](https://pypi.python.org/pypi/requests)
+[requests](https://pypi.python.org/pypi/requests)
 
 上报字段
 --------------------------------

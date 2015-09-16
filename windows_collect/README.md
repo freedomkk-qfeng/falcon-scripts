@@ -35,7 +35,7 @@ python >= 2.6
 |net.if.in.error|interface|counter|网卡进错包数|
 |net.if.out.error|interface|counter|网卡出错包数|
 |net.if.in.drop|interface|counter|网卡进弃包数|
-|net.if.in.drop|interface|counter|网卡出弃包数|
+|net.if.out.drop|interface|counter|网卡出弃包数|
 
 
 使用方式

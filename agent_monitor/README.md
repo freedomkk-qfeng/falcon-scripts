@@ -1,4 +1,4 @@
-windows 监控脚本
+agent 监控脚本
 ================================
 
 依赖
@@ -7,11 +7,19 @@ python >= 2.6
 
 [requests](https://pypi.python.org/pypi/requests)
 
-上报字段
+工作逻辑
 --------------------------------
+http 请求 agent 的 health 接口 (http://agent:1988/health)
+
+返回 http 连接的延迟作为参数上报。
+
+##### 上报字段 #####
+
 | key |  tag | type | note |
 |-----|------|------|------|
 |agent.delay|/|GAUGE|从脚本服务器到 agent 的延迟|
+
+当 http 请求异常时，则 agent.delay 上报为 -1 。可以在 portal 内对此进行告警。
 
 使用方式1
 --------------------------------

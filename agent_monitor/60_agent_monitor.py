@@ -9,7 +9,7 @@ from multiprocessing.dummy import Pool as ThreadPool
 hostlist = [
 			{"endpoint":"endpoint1","url":"http://agent_host:1988/health"},
 			{"endpoint":"endpoint2","url":"http://agent_host:1988/health"},
-			{"endpoint":"mendpoint3","url":"http://agent_host:1988/health"},
+			{"endpoint":"endpoint3","url":"http://agent_host:1988/health"},
 			{"endpoint":"endpoint4","url":"http://agent_host:1988/health"},
 			{"endpoint":"endpoint5","url":"http://agent_host:1988/health"}]
 push_url = "http://agent_host/v1/push"
@@ -26,7 +26,7 @@ def main():
 	pool.close()
 	pool.join()
 	#print time.clock()-time_start
-	print json.dumps(payload,indent=4)
+	print json.dumps(payload)
 
 
 def push_payload(host):

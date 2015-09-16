@@ -18,7 +18,7 @@ push_url = "http://agent_host/v1/push"
 #################################################################
 
 payload = []
-data = {"endpoint":"","metric":"agent.delay","timestamp":"","step":60,"value":"","counterType":"GAUGE","tags":""}
+data = {"endpoint":"","metric":"agent.latency","timestamp":"","step":60,"value":"","counterType":"GAUGE","tags":""}
 
 def main():
 	time_start = time.clock()

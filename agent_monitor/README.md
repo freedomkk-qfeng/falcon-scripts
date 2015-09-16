@@ -17,9 +17,9 @@ http 请求 agent 的 health 接口 (http://agent:1988/health)
 
 | key |  tag | type | note |
 |-----|------|------|------|
-|agent.delay|/|GAUGE|从脚本服务器到 agent 的延迟|
+|agent.latency|/|GAUGE|从脚本服务器到 agent 的延迟|
 
-当 http 请求异常时，则 agent.delay 上报为 -1 。可以在 portal 内对此进行告警。
+当 http 请求异常时，则 agent.latency 上报为 -1 。可以在 portal 内对此进行告警。
 
 使用方式1
 --------------------------------

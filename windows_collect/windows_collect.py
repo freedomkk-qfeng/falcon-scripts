@@ -55,7 +55,7 @@ def main():
 			continue
 		disk_info = psutil.disk_usage(disk.device)
 
-		data["metric"] = "df.free.percent"
+		data["metric"] = "df.used.percent"
 		data["value"] = disk_info.percent
 		data["tags"] = "disk=" + disk.device.split(":")[0]
 		payload.append(copy.copy(data))

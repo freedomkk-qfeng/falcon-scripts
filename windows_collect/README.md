@@ -43,3 +43,11 @@ python >= 2.6
 1. 根据实际部署情况，修改脚本开头的配置参数
 2. 测试： python windows_collect.py
 3. 丢进 windows 计划任务完事
+
+测试环境
+--------------------------------
+已经测试过的环境有
+
+windows 10
+windows 7
+windows server 2012

@@ -18,7 +18,7 @@ python >= 2.6
 |cpu.idle|/|GAUGE|CPU 空闲百分比|
 |mem.memused.percent|/|GAUGE|内存使用百分比 |
 |mem.swapused.percent|/|GAUGE|swap 使用百分比|
-|df.used.percent|disk.device|GAUGE|分区使用空间百分比|
+|df.used.percent|disk|GAUGE|分区使用空间百分比|
 |df.byte.total|disk|GAUGE|分区总容量|
 |df.byte.used|disk|GAUGE|分区使用量|
 |df.byte.free|disk|GAUGE|分区剩余量|

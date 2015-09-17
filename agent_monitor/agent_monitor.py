@@ -25,12 +25,12 @@ def main():
 
 def push_payload(host):
 	ts = int(time.time())
-	delay = agent_healh_delay(host["url"])
-	payload = [{"endpoint":host["endpoint"],"metric":"agent.delay","timestamp":ts,"step":60,"value":delay,"counterType":"GAUGE","tags":""}]
+	latency = agent_healh_latency(host["url"])
+	payload = [{"endpoint":host["endpoint"],"metric":"agent.latency","timestamp":ts,"step":60,"value":latency,"counterType":"GAUGE","tags":""}]
 	#print json.dumps(payload,indent=4)
 	r = requests.post(push_url, data=json.dumps(payload))
 
-def agent_healh_delay(url):
+def agent_healh_latency(url):
 	result = -1
 	try:
 		r = requests.get(url,timeout=3)

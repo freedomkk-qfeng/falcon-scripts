@@ -32,15 +32,15 @@ def main():
 
 def push_payload(host):
 	ts = int(time.time())
-	delay = agent_healh_delay(host["url"])
+	latency = agent_healh_latency(host["url"])
 	data["endpoint"] = host["endpoint"]
-	data["value"] = delay
+	data["value"] = latency
 	data["timestamp"] = ts
 	payload.append(copy.copy(data))
 
 	#r = requests.post(push_url, data=json.dumps(payload))
 
-def agent_healh_delay(url):
+def agent_healh_latency(url):
 	result = -1
 	try:
 		r = requests.get(url,timeout=3)

@@ -137,8 +137,8 @@ def main():
 		data["metric"] = "net.if.out.drop"
 		data["value"] = net_io_status[key].dropout
 		payload.append(copy.copy(data))
-	print json.dumps(payload,indent=4)
-	#r = requests.post(push_url, data=json.dumps(payload))
+	#print json.dumps(payload,indent=4)
+	r = requests.post(push_url, data=json.dumps(payload))
 	#print r.text
 
 def is_interface_ignore(key):
